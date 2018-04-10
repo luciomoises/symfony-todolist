@@ -1,0 +1,14 @@
+{%  extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/signin.css') }}">
+{% endblock %}
+
+{% block body %}
+	<div class="form-signin">
+		{{ form(registration_form) }}
+		<a href="{{ path('login')}}" class="btn-warning btn">Log In</a>
+	</div>
+{% endblock %}

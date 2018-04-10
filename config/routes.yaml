@@ -1,0 +1,8 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+homepage:
+  path: /
+  controller: App\Controller\User\Usercontroller::loginAction
+  defaults:
+    template: user/index.html.twig

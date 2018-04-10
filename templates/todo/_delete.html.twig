@@ -1,0 +1,7 @@
+<form action="{{ url('todoDelete', {id: todo.id}) }}" method="post" data-confirmation="true" id="delete">
+    <input type="hidden" name="token" value="{{ csrf_token('delete') }}" />
+    <a href="{{ path('todoEdit', {id: todo.id}) }}" class="btn btn-warning"> <img src="{{ asset('imgs/pencil.svg') }}"></a>
+    <button type="submit" class="btn btn-danger" onclick="confirm('Are you sure to delete this post?') || event.preventDefault()">
+         <img src="{{ asset('imgs/trashcan.svg') }}">
+    </button>
+</form>
